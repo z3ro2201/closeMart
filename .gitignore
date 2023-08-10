@@ -36,6 +36,5 @@ out/
 ### VS Code ###
 .vscode/
 
-
 ### SETTINGS ###
 src/main/resources/application.yml
