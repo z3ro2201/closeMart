@@ -13,7 +13,7 @@ public class MartListServiceImpl implements MartListService {
     private final MartListMapper martListMapper;
 
     @Override
-    public List<martListDto> getMartList() {
-        return martListMapper.getMartList();
+    public List<martListDto> getMartList(String zone, String city, String martOperator) {
+        return martListMapper.getMartList(zone, city, martOperator);
     }
 }

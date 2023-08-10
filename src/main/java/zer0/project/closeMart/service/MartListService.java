@@ -4,6 +4,5 @@ import zer0.project.closeMart.dto.martListDto;
 import java.util.List;
 
 public interface MartListService {
-    public List<martListDto> getMartList();
-
+    List<martListDto> getMartList(String zone, String city, String martOperator);
 }

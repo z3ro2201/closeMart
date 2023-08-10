@@ -1,6 +1,7 @@
 package zer0.project.closeMart.controller;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.RequestParam;
 import zer0.project.closeMart.dto.martListDto;
 import zer0.project.closeMart.service.MartListService;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +22,9 @@ public class martApiController {
     }
 
     @RequestMapping(value = "/api/closeMart", method = RequestMethod.GET)
-    public List<martListDto> getMart() {
-        return martListService.getMartList();
+    public List<martListDto> getMartList(@RequestParam(required = false) String zone,
+                                         @RequestParam(required = false) String city,
+                                         @RequestParam(required = false) String martOperator) {
+        return martListService.getMartList(zone, city, martOperator);
     }
 }

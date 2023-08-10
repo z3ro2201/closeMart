@@ -5,5 +5,16 @@
 <mapper namespace="zer0.project.closeMart.mapper.MartListMapper">
     <select id="getMartList" resultType="zer0.project.closeMart.dto.martListDto">
         SELECT * FROM martList
+        <where>
+            <if test="zone != null">
+                AND zone=#{zone}
+            </if>
+            <if test="city != null">
+                AND city=#{city}
+            </if>
+            <if test="martOperator != null">
+                AND martOperatorName=#{martOperator}
+            </if>
+        </where>
     </select>
 </mapper>
